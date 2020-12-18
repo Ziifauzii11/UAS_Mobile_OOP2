@@ -126,7 +126,7 @@ class MainHpActivity : AppCompatActivity() {
 
         init {
             this.tvMerk = view?.findViewById(R.id.tvMerk) as TextView
-            this.tvTipe = view?.findViewById(R.id.tvTipe) as TextView
+            this.tvTipe = view?.findViewById(R.id.tvSeri) as TextView
             this.tvHarga = view?.findViewById(R.id.tvHarga) as TextView
         }
     }
