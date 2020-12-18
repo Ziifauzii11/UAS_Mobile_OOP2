@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">FinalProjectUAS</string>
+    <string name="app_name">Data Barang</string>
+    <string name="action_settings">Settings</string>
 </resources>

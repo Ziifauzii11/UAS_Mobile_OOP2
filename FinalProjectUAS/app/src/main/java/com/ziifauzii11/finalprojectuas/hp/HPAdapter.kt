@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class HPAdapter {
-    private val dbName = "dbBarang"
+    private val dbName = "dbHP"
     private val dbTable = "HP"
     private val colId = "Id"
     private val colMerk = "Merk"
