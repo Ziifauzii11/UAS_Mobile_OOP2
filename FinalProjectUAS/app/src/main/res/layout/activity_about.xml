@@ -6,4 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
 
+    <ImageView
+        android:id="@+id/img_salsa"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="328dp"
+        tools:srcCompat="@drawable/fauzi" />
+
+    <TextView
+        android:id="@+id/nimSalsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="NIM : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <TextView
+        android:id="@+id/kelas_salsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kelas"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <TextView
+        android:id="@+id/nim_salsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nim"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <TextView
+        android:id="@+id/kelasSalsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kelas : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <TextView
+        android:id="@+id/nama_salsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nama"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <TextView
+        android:id="@+id/namaSalsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nama : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_fauzi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/fauzi" />
+
+    <TextView
+        android:id="@+id/namaFauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="144dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nama : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nimFauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="NIM : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kelas_fauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="193dp"
+        android:layout_marginEnd="88dp"
+        android:text="kelas"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nim_fauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="104dp"
+        android:text="nim"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kelasFauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="193dp"
+        android:layout_marginEnd="149dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kelas : "
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nama_fauzi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="84dp"
+        android:text="nama"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
