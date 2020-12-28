@@ -73,6 +73,15 @@ class HPActivity : AppCompatActivity() {
                     }else{
                         Toast.makeText(this, "Failed to save data", Toast.LENGTH_SHORT).show()
                     }
+                }else{
+                    var selectionArgs = arrayOf(id.toString())
+                    val mID = dbAdapter.update(values, "Id=?", selectionArgs)
+                    if (mID > 0){
+                        Toast.makeText(this, "Updated", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }else{
+                        Toast.makeText(this, "Failed to update data", Toast.LENGTH_SHORT).show()
+                    }
                 }
                 true
             }

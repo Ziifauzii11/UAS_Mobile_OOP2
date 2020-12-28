@@ -86,7 +86,7 @@ class MainHpActivity : AppCompatActivity() {
             var mHP = hpList[position]
 
             vh.tvMerk.text = mHP.merk
-            vh.tvTipe.text = mHP.merk
+            vh.tvTipe.text = mHP.tipe
             vh.tvHarga.text = "Rp." + mHP.harga
 
             lvHp.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, position, id ->
