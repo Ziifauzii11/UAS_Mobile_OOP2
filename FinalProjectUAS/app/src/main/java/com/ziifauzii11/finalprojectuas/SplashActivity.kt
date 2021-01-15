@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.os.Handler
 
 class SplashActivity : AppCompatActivity() {
-    lateinit var handler: Handler
+    private val SPLASH_TIME_OUT:Long = 3000 // 1 sec
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        handler = Handler()
-        handler.postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        Handler().postDelayed({
+
+            startActivity(Intent(this,MainActivity::class.java))
+
             finish()
-        }, 2000)
+        }, SPLASH_TIME_OUT)
     }
 }
