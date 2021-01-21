@@ -1,15 +1,10 @@
 package com.ziifauzii11.finalprojectuas.laptop
 
-class Laptop {
-    var id: Int? = null
-    var merk: String? = null
-    var seri: String? = null
-    var harga: String? = null
+import java.io.Serializable
 
-    constructor(id: Int, merk: String, seri: String, harga:String){
-        this.id = id
-        this.merk = merk
-        this.seri = seri
-        this.harga = harga
-    }
+class Laptop : Serializable {
+    var key : String? = null
+    var merk : String? = null
+    var harga : String? = null
+    var spesifikasi : String? = null
 }

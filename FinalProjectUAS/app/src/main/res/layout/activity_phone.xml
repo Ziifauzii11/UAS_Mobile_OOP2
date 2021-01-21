@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".laptop.LaptopActivity">
+    tools:context=".phone.PhoneActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListLaptop"
+        android:id="@+id/rvListPhone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
@@ -16,10 +16,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_laptop" />
+        tools:listitem="@layout/item_phone" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btAddLaptop"
+        android:id="@+id/btAddPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

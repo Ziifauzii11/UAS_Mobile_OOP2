@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "167496002325",
+    "project_id": "oopbarang",
+    "storage_bucket": "oopbarang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167496002325:android:56c7b8adcdee4b515c971c",
+        "android_client_info": {
+          "package_name": "com.ziifauzii11.finalprojectuas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167496002325-sd0ud4lveb1mrj70usikvmi9tj0fvocf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHQMXPTNg5MV4SSvKe912vb2nbVSfk4es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167496002325-sd0ud4lveb1mrj70usikvmi9tj0fvocf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

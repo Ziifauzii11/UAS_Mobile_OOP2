@@ -1,64 +1,47 @@
 package com.ziifauzii11.finalprojectuas.laptop
 
-import android.content.ContentValues
-import android.content.Context
-import android.database.Cursor
-import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.ziifauzii11.finalprojectuas.R
+import kotlinx.android.synthetic.main.item_laptop.view.*
 
-class LaptopAdapter {
-    private val dbName = "dbLaptop"
-    private val dbTable = "Laptop"
-    private val colId = "Id"
-    private val colMerk = "Merk"
-    private val colSeri = "Seri"
-    private val colHarga = "Harga"
-    private val dbVersion = 1
-
-    private val CREATE_TABLE_SQL = "CREATE TABLE IF NOT EXISTS " +
-            dbTable + " (" + colId + " " + "INTEGER PRIMARY KEY," + colMerk + " TEXT, " +
-            colSeri + " TEXT, " + colHarga + " TEXT);"
-    private var db: SQLiteDatabase? = null
-
-    constructor(context: Context){
-        var dbHelper = DatabaseHelper(context)
-        db = dbHelper.writableDatabase
+class LaptopAdapter(val datalaptop : ArrayList<Laptop>, val onClick : OnClick) : RecyclerView.Adapter<LaptopAdapter.MyHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_laptop, parent, false)
+        return MyHolder(view)
     }
 
-    fun allQuery(): Cursor {
-        return db!!.rawQuery("select * from " + dbTable, null)
-    }
+    override fun getItemCount(): Int = datalaptop.size
 
-    fun insert(values: ContentValues): Long{
-        val ID = db!!.insert(dbTable, "", values)
-        return ID
-    }
-
-    fun update(values: ContentValues, selection: String, selectionArgs: Array<String>): Int{
-        val count = db!!.update(dbTable, values, selection, selectionArgs)
-        return count
-    }
-
-    fun delete(selection: String, selectionArgs: Array<String>):Int{
-        val count = db!!.delete(dbTable, selection, selectionArgs)
-        return count
-    }
-
-    inner class DatabaseHelper : SQLiteOpenHelper {
-
-        var context: Context? = null
-
-        constructor(context: Context) : super(context, dbName, null, dbVersion){
-            this.context = context
+    override fun onBindViewHolder(holder: MyHolder, position: Int) {
+        holder.bind(datalaptop.get(position))
+        holder.itemView.btDeleteLaptop.setOnClickListener {
+            onClick.delete(datalaptop.get(position).key)
         }
-
-        override fun onCreate(db: SQLiteDatabase?) {
-            db!!.execSQL(CREATE_TABLE_SQL)
+        holder.itemView.setOnClickListener {
+            onClick.edit(datalaptop.get(position))
         }
+    }
 
-        override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-            db!!.execSQL("Drop table IF EXISTS " + dbTable)
+    class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(laptop : Laptop){
+            itemView.apply {
+                val merk = "Brand       : ${laptop.merk}"
+                val harga = "Harga       : Rp. ${laptop.harga}"
+                val spesifikasi = "Spesifikasi : ${laptop.spesifikasi}"
+
+                tvMerk.text = merk
+                tvHarga.text = harga
+                tvSpesifikasi.text = spesifikasi
+            }
         }
+    }
 
+
+    interface OnClick {
+        fun delete(key : String?)
+        fun edit(laptop : Laptop?)
     }
 }

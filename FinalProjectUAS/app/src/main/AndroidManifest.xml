@@ -4,16 +4,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".AboutActivity" ></activity>
+        android:theme="@style/Theme.Finalprojectuas">
+        <activity android:name=".TentangActivity"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".phone.FormPhoneActivity" />
+        <activity android:name=".phone.PhoneActivity" />
         <activity android:name=".laptop.LaptopActivity" />
-        <activity android:name=".hp.HPActivity" />
-        <activity android:name=".laptop.MainLaptopActivity" />
-        <activity android:name=".hp.MainHpActivity" />
+        <activity android:name=".laptop.FormLaptopActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

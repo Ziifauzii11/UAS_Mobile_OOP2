@@ -4,4 +4,4 @@
 1. Dwi Febi Fauzi 18090125 5C
 2. Asri Nihal Salsabila 18090087 5C
 
-Simple CRUD data barang menggunakan SQLite
+Simple CRUD data barang menggunakan Firebase

@@ -1,4 +1,4 @@
-package com.ziifauzii11.finalprojectuas.laptop
+package com.ziifauzii11.finalprojectuas.phone
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -8,16 +8,16 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.*
 import com.ziifauzii11.finalprojectuas.R
-import kotlinx.android.synthetic.main.activity_laptop.*
+import kotlinx.android.synthetic.main.activity_phone.*
 
-class LaptopActivity : AppCompatActivity() {
+class PhoneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_laptop)
+        setContentView(R.layout.activity_phone)
 
         val database = FirebaseDatabase.getInstance()
 
-        var  myRef : DatabaseReference? = database.getReference("datalaptop")
+        var  myRef : DatabaseReference? = database.getReference("dataphone")
 
         // Read Data
         myRef?.addValueEventListener(object : ValueEventListener {
@@ -25,21 +25,21 @@ class LaptopActivity : AppCompatActivity() {
 
                 // looping ketika mengambil data
                 // merah ? coba tambahkan ()
-                val dataArray = ArrayList<Laptop>()
+                val dataArray = ArrayList<Phone>()
                 for (i in dataSnapshot.children){
-                    val data = i.getValue(Laptop::class.java)
+                    val data = i.getValue(Phone::class.java)
                     data?.key = i.key
                     data?.let { dataArray.add(it) }
                 }
-                rvListLaptop.adapter = LaptopAdapter(dataArray, object : LaptopAdapter.OnClick {
-                    override fun edit(laptop: Laptop?) {
-                        val intent = Intent(this@LaptopActivity, FormLaptopActivity::class.java)
-                        intent.putExtra("laptop", laptop)
+                rvListPhone.adapter = PhoneAdapter(dataArray, object : PhoneAdapter.OnClick {
+                    override fun edit(phone: Phone?) {
+                        val intent = Intent(this@PhoneActivity, FormPhoneActivity::class.java)
+                        intent.putExtra("phone", phone)
                         startActivity(intent)
                     }
 
                     override fun delete(key: String?) {
-                        AlertDialog.Builder(this@LaptopActivity).apply {
+                        AlertDialog.Builder(this@PhoneActivity).apply {
                             setTitle("Hapus ?")
                             setPositiveButton("Ya") { dialogInterface: DialogInterface, i: Int ->
                                 myRef?.child(key.toString())?.removeValue()
@@ -57,8 +57,8 @@ class LaptopActivity : AppCompatActivity() {
             }
         })
 
-        btAddLaptop.setOnClickListener {
-            startActivity(Intent(this@LaptopActivity, FormLaptopActivity::class.java))
+        btAddPhone.setOnClickListener {
+            startActivity(Intent(this@PhoneActivity, FormPhoneActivity::class.java))
         }
     }
 }
